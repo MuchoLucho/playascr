@@ -110,6 +110,8 @@ select {
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .brand-bar {
@@ -171,6 +173,7 @@ select {
   gap: 8px;
   flex: 1 1 340px;
   min-width: 0;
+  max-width: 100%;
 }
 
 .header-actions {
@@ -228,7 +231,7 @@ select {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
-  flex: 1 1 200px;
+  flex: 1 1 140px;
   min-width: 0;
   min-height: 42px;
   padding: 0 12px;
@@ -251,6 +254,7 @@ select {
   background: transparent;
   outline: none;
   width: 100%;
+  min-width: 0;
   font-size: 0.92rem;
   color: var(--text-main);
   padding: 10px 0;
@@ -446,6 +450,39 @@ select {
   gap: 6px;
 }
 
+.credit-pill {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--surface);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 4px 10px;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  width: fit-content;
+  transition: all 0.15s ease;
+}
+
+.credit-pill:hover {
+  color: var(--text-main);
+  background: var(--surface-solid);
+  border-color: var(--border-strong);
+  transform: translateY(-1px);
+}
+
+.credit-pill .heart-icon,
+.about-section .heart-icon {
+  color: #CE1126;
+  fill: #CE1126;
+  vertical-align: middle;
+}
+
 .lens-row {
   display: flex;
   align-items: center;
@@ -603,6 +640,7 @@ select {
 @media (max-width: 767px) {
   .brand-bar {
     width: 100%;
+    max-width: 100%;
     flex: 1 1 100%;
   }
 
@@ -616,6 +654,7 @@ select {
 
   .search-actions-wrap {
     width: 100%;
+    max-width: 100%;
     flex: 1 1 100%;
   }
 
@@ -663,12 +702,15 @@ select {
   }
 }
 
-@media (max-width: 400px) {
-  .pill-btn .btn-text {
+@media (max-width: 580px) {
+  .header-actions .pill-btn .btn-text {
     display: none;
   }
-  .pill-btn {
-    padding: 6px 10px;
+  .header-actions .pill-btn {
+    padding: 6px 8px;
+    min-width: 34px;
+    justify-content: center;
+    flex-shrink: 0;
   }
 }
 

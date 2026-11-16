@@ -20,6 +20,8 @@ import {
   Check,
   Eye,
   Fish,
+  GitFork,
+  Heart,
   Info,
   LifeBuoy,
   LocateFixed,
@@ -56,6 +58,8 @@ const ICON_REGISTRY = {
   share: Share2,
   check: Check,
   locate: LocateFixed,
+  gitFork: GitFork,
+  heart: Heart,
 };
 
 /**

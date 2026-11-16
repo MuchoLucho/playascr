@@ -129,4 +129,11 @@ export function applyStaticTranslations() {
       el.setAttribute('aria-label', translated);
     }
   });
+  document.querySelectorAll('[data-i18n-title]').forEach((el) => {
+    const key = el.getAttribute('data-i18n-title');
+    const translated = t(key);
+    if (typeof translated === 'string') {
+      el.setAttribute('title', translated);
+    }
+  });
 }
