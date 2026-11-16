@@ -26,7 +26,10 @@
     "basemapSatellite": "Satellite",
     "basemapTopo": "Terrain",
     "lensLabel": "Map Indicator",
-    "legendTitle": "Legend"
+    "legendTitle": "Legend",
+    "themeToggle": "Toggle theme",
+    "themeLight": "Switch to light mode",
+    "themeDark": "Switch to dark mode"
   },
   "filters": {
     "all": "All",

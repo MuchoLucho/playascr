@@ -1,43 +1,131 @@
 :root {
+  /* Automatically adapt native UI to user system preferences */
+  color-scheme: light dark;
+
+  /* Reflect <meta name="color-scheme"> overrides */
+  &:has(> head > meta[name="color-scheme"][content="dark"]),
+  &[data-theme="dark"] {
+    color-scheme: dark;
+  }
+  &:has(> head > meta[name="color-scheme"][content="light"]),
+  &[data-theme="light"] {
+    color-scheme: light;
+  }
+
+  /* Base canvas & surface tokens */
+  --bg-canvas: light-dark(#cde7f5, #0a1120);
   --bg-dark: #071926;
-  --surface: rgba(255, 255, 255, 0.94);
-  --surface-solid: #ffffff;
-  --surface-muted: #f1f5f9;
-  --border: rgba(15, 23, 42, 0.1);
-  --text-main: #0f172a;
-  --text-muted: #475569;
-  --text-light: #64748b;
-  --brand: #0369a1;
-  --brand-dark: #0c4a6e;
-  --brand-soft: #e0f2fe;
+  --surface: light-dark(rgba(255, 255, 255, 0.94), rgba(15, 23, 42, 0.88));
+  --surface-solid: light-dark(#ffffff, #0f172a);
+  --surface-muted: light-dark(#f1f5f9, #1e293b);
+  --border: light-dark(rgba(15, 23, 42, 0.1), rgba(255, 255, 255, 0.12));
+  --border-strong: light-dark(rgba(15, 23, 42, 0.2), rgba(255, 255, 255, 0.22));
+
+  /* Typography tokens */
+  --text-main: light-dark(#0f172a, #f8fafc);
+  --text-muted: light-dark(#475569, #94a3b8);
+  --text-light: light-dark(#64748b, #64748b);
+  --title-color: light-dark(#0B2B6B, #93c5fd);
+
+  /* Brand tokens */
+  --brand: light-dark(#0369a1, #38bdf8);
+  --brand-fg: light-dark(#ffffff, #082f49);
+  --brand-dark: light-dark(#0c4a6e, #7dd3fc);
+  --brand-soft: light-dark(#e0f2fe, rgba(56, 189, 248, 0.18));
 
   /* Safety & Behavior colors */
-  --risk-low-bg: #dcfce7;
-  --risk-low-fg: #15803d;
+  --risk-low-bg: light-dark(#dcfce7, rgba(34, 197, 94, 0.2));
+  --risk-low-fg: light-dark(#15803d, #4ade80);
   --risk-low-pin: #22c55e;
 
-  --risk-med-bg: #fef9c3;
-  --risk-med-fg: #a16207;
+  --risk-med-bg: light-dark(#fef9c3, rgba(234, 179, 8, 0.2));
+  --risk-med-fg: light-dark(#a16207, #fde047);
   --risk-med-pin: #eab308;
 
-  --risk-high-bg: #fee2e2;
-  --risk-high-fg: #b91c1c;
+  --risk-high-bg: light-dark(#fee2e2, rgba(239, 68, 68, 0.2));
+  --risk-high-fg: light-dark(#b91c1c, #f87171);
   --risk-high-pin: #ef4444;
 
-  --risk-vhigh-bg: #fae8ff;
-  --risk-vhigh-fg: #a21caf;
+  --risk-vhigh-bg: light-dark(#fae8ff, rgba(217, 70, 239, 0.2));
+  --risk-vhigh-fg: light-dark(#a21caf, #f0abfc);
   --risk-vhigh-pin: #d946ef;
 
-  --risk-na-bg: #f1f5f9;
-  --risk-na-fg: #475569;
+  --risk-na-bg: light-dark(#f1f5f9, rgba(148, 163, 184, 0.2));
+  --risk-na-fg: light-dark(#475569, #cbd5e1);
   --risk-na-pin: #64748b;
 
-  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.08);
-  --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.14);
-  --shadow-lg: 0 16px 40px rgba(15, 23, 42, 0.22);
+  --shadow-sm: light-dark(0 2px 8px rgba(15, 23, 42, 0.08), 0 2px 8px rgba(0, 0, 0, 0.4));
+  --shadow-md: light-dark(0 8px 24px rgba(15, 23, 42, 0.14), 0 8px 24px rgba(0, 0, 0, 0.55));
+  --shadow-lg: light-dark(0 16px 40px rgba(15, 23, 42, 0.22), 0 16px 40px rgba(0, 0, 0, 0.7));
   --radius-md: 12px;
   --radius-lg: 18px;
   --radius-pill: 999px;
+
+  /* Modern native UI accents & scrollbars */
+  accent-color: var(--brand);
+  scrollbar-color: var(--text-light) transparent;
+}
+
+/* Fallback for browsers without light-dark() support */
+@media (prefers-color-scheme: dark) {
+  :root:not(:has(> head > meta[name="color-scheme"][content="light"])):not([data-theme="light"]) {
+    --bg-canvas: #0a1120;
+    --surface: rgba(15, 23, 42, 0.88);
+    --surface-solid: #0f172a;
+    --surface-muted: #1e293b;
+    --border: rgba(255, 255, 255, 0.12);
+    --border-strong: rgba(255, 255, 255, 0.22);
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --title-color: #93c5fd;
+    --brand: #38bdf8;
+    --brand-fg: #082f49;
+    --brand-dark: #7dd3fc;
+    --brand-soft: rgba(56, 189, 248, 0.18);
+    --risk-low-bg: rgba(34, 197, 94, 0.2);
+    --risk-low-fg: #4ade80;
+    --risk-med-bg: rgba(234, 179, 8, 0.2);
+    --risk-med-fg: #fde047;
+    --risk-high-bg: rgba(239, 68, 68, 0.2);
+    --risk-high-fg: #f87171;
+    --risk-vhigh-bg: rgba(217, 70, 239, 0.2);
+    --risk-vhigh-fg: #f0abfc;
+    --risk-na-bg: rgba(148, 163, 184, 0.2);
+    --risk-na-fg: #cbd5e1;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.55);
+    --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.7);
+  }
+}
+
+:root:has(> head > meta[name="color-scheme"][content="dark"]),
+:root[data-theme="dark"] {
+  --bg-canvas: #0a1120;
+  --surface: rgba(15, 23, 42, 0.88);
+  --surface-solid: #0f172a;
+  --surface-muted: #1e293b;
+  --border: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.22);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --title-color: #93c5fd;
+  --brand: #38bdf8;
+  --brand-fg: #082f49;
+  --brand-dark: #7dd3fc;
+  --brand-soft: rgba(56, 189, 248, 0.18);
+  --risk-low-bg: rgba(34, 197, 94, 0.2);
+  --risk-low-fg: #4ade80;
+  --risk-med-bg: rgba(234, 179, 8, 0.2);
+  --risk-med-fg: #fde047;
+  --risk-high-bg: rgba(239, 68, 68, 0.2);
+  --risk-high-fg: #f87171;
+  --risk-vhigh-bg: rgba(217, 70, 239, 0.2);
+  --risk-vhigh-fg: #f0abfc;
+  --risk-na-bg: rgba(148, 163, 184, 0.2);
+  --risk-na-fg: #cbd5e1;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.7);
 }
 
 *,
@@ -54,7 +142,7 @@ body {
   height: 100%;
   overflow: hidden;
   font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
-  color: #1A2436;
+  color: var(--text-main);
   background: var(--bg-dark);
   -webkit-font-smoothing: antialiased;
 }
@@ -87,7 +175,7 @@ select {
   width: 100%;
   height: 100%;
   z-index: 1;
-  background: #cde7f5;
+  background: var(--bg-canvas);
 }
 
 /* Floating Top Bar */
@@ -154,7 +242,7 @@ select {
   font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 1.05rem;
   font-weight: 700;
-  color: #0B2B6B;
+  color: var(--title-color);
   letter-spacing: 0.02em;
   line-height: 1.2;
   white-space: nowrap;
@@ -162,7 +250,7 @@ select {
 
 .brand-title-surf {
   font-family: 'Pacifico', cursive;
-  color: #0B2B6B;
+  color: var(--title-color);
 }
 
 .brand-sub {
@@ -217,7 +305,7 @@ select {
 
 .pill-btn.primary {
   background: var(--brand);
-  color: #ffffff;
+  color: var(--brand-fg);
   border-color: var(--brand);
 }
 
@@ -389,19 +477,81 @@ select {
 
 .chip.active {
   background: var(--brand);
-  color: #ffffff;
+  color: var(--brand-fg);
   border-color: var(--brand-dark);
 }
 
 .count-pill {
   flex: 0 0 auto;
-  background: rgba(15, 23, 42, 0.8);
-  color: #ffffff;
+  background: var(--surface-muted);
+  color: var(--text-main);
+  border: 1px solid var(--border);
   border-radius: var(--radius-pill);
   padding: 6px 11px;
   font-size: 0.75rem;
   font-weight: 650;
   box-shadow: var(--shadow-sm);
+}
+
+/* Brand Controls (Theme Toggle & Language Switch) */
+.brand-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.theme-toggle-btn {
+  border: 1px solid var(--border);
+  background: var(--surface-muted);
+  color: var(--text-muted);
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+.theme-toggle-btn:hover {
+  background: var(--surface-solid);
+  color: var(--brand-dark);
+  border-color: var(--border-strong);
+  transform: scale(1.05);
+}
+
+.theme-toggle-btn:active {
+  transform: scale(0.95);
+}
+
+/* Theme Icons: Zero-JS CSS branching mapped to color-scheme */
+.theme-icon-dark {
+  display: none;
+}
+.theme-icon-light {
+  display: inline-flex;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(:has(> head > meta[name="color-scheme"][content="light"])):not([data-theme="light"]) .theme-icon-dark {
+    display: inline-flex;
+  }
+  :root:not(:has(> head > meta[name="color-scheme"][content="light"])):not([data-theme="light"]) .theme-icon-light {
+    display: none;
+  }
+}
+
+:root:has(> head > meta[name="color-scheme"][content="dark"]) .theme-icon-dark,
+:root[data-theme="dark"] .theme-icon-dark {
+  display: inline-flex;
+}
+:root:has(> head > meta[name="color-scheme"][content="dark"]) .theme-icon-light,
+:root[data-theme="dark"] .theme-icon-light {
+  display: none;
 }
 
 /* Language segmented switch */
@@ -602,7 +752,7 @@ select {
 
 .basemap-btn.active {
   background: var(--brand);
-  color: #ffffff;
+  color: var(--brand-fg);
 }
 
 /* Beach Detail Drawer (Desktop Side Panel / Mobile Swipeable Bottom Sheet) */
@@ -735,7 +885,7 @@ select {
   width: 42px;
   height: 5px;
   border-radius: 99px;
-  background: #cbd5e1;
+  background: light-dark(#cbd5e1, #475569);
 }
 
 .drawer-header {
@@ -961,9 +1111,9 @@ select {
   margin-top: 8px;
   padding: 8px 10px;
   border-radius: 10px;
-  background: #fff7ed;
-  border: 1px solid #fed7aa;
-  color: #9a3412;
+  background: light-dark(#fff7ed, rgba(234, 88, 12, 0.15));
+  border: 1px solid light-dark(#fed7aa, rgba(234, 88, 12, 0.3));
+  color: light-dark(#9a3412, #fdba74);
   font-size: 0.8rem;
   font-weight: 600;
   line-height: 1.35;
@@ -1026,7 +1176,7 @@ select {
   font-size: 0.86rem;
   line-height: 1.55;
   color: var(--text-main);
-  background: #f8fafc;
+  background: var(--surface-muted);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 12px;
@@ -1057,7 +1207,7 @@ select {
 
 .action-btn.primary {
   background: var(--brand);
-  color: #ffffff;
+  color: var(--brand-fg);
   border-color: var(--brand);
 }
 
@@ -1068,11 +1218,13 @@ select {
 }
 
 .beach-pill {
-  background: rgba(255, 255, 255, 0.95);
-  border: 1.5px solid rgba(15, 23, 42, 0.2);
+  background: var(--surface);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1.5px solid var(--border-strong);
   border-radius: 10px;
   padding: 4px 7px;
-  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.2);
+  box-shadow: var(--shadow-md);
   white-space: nowrap;
   display: inline-flex;
   flex-direction: column;
@@ -1084,7 +1236,7 @@ select {
 .beach-pill-name {
   font-size: 11px;
   font-weight: 800;
-  color: #0f172a;
+  color: var(--text-main);
   line-height: 1.1;
 }
 
@@ -1208,7 +1360,7 @@ select {
 }
 
 .diagram-card {
-  background: #f8fafc;
+  background: var(--surface-muted);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 10px;
@@ -1238,13 +1390,29 @@ select {
 }
 
 .escape-banner {
-  background: #fef2f2;
-  border: 1px solid #fecaca;
-  color: #991b1b;
+  background: light-dark(#fef2f2, rgba(239, 68, 68, 0.15));
+  border: 1px solid light-dark(#fecaca, rgba(239, 68, 68, 0.3));
+  color: light-dark(#991b1b, #fca5a5);
   border-radius: var(--radius-md);
   padding: 12px;
   font-weight: 600;
   font-size: 0.85rem;
+}
+
+/* Map Street Tiles Dark Filter */
+.map-tiles-street {
+  transition: filter 0.3s ease;
+}
+
+:root:has(> head > meta[name="color-scheme"][content="dark"]) .map-tiles-street,
+:root[data-theme="dark"] .map-tiles-street {
+  filter: brightness(0.65) invert(1) contrast(2.6) hue-rotate(195deg) saturate(0.35) brightness(0.85);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(:has(> head > meta[name="color-scheme"][content="light"])):not([data-theme="light"]) .map-tiles-street {
+    filter: brightness(0.65) invert(1) contrast(2.6) hue-rotate(195deg) saturate(0.35) brightness(0.85);
+  }
 }
 
 /* Adjust Leaflet controls so they stay clear of top/bottom custom chrome */

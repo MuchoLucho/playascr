@@ -87,6 +87,7 @@ function createOsmLayer() {
   return L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors',
     maxZoom: 19,
+    className: 'map-tiles-street',
   });
 }
 
@@ -95,6 +96,7 @@ function createCartoVoyagerLayer(apiKey) {
   return L.tileLayer(`https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png${qs}`, {
     attribution: '&copy; OpenStreetMap contributors, &copy; CARTO',
     maxZoom: 19,
+    className: 'map-tiles-street',
   });
 }
 

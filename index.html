@@ -3,7 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#0369a1">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f172a">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    try {
+      const savedTheme = localStorage.getItem("color-scheme");
+      if (savedTheme === "light" || savedTheme === "dark") {
+        document.querySelector('meta[name="color-scheme"]').content = savedTheme;
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      }
+    } catch (e) {}
+  </script>
   <meta name="description" content="Mapa interactivo de las playas de Costa Rica con indicadores de comportamiento costero, corrientes de resaca, seguridad familiar, surf, accesos y color de arena.">
   <title>PlayasCR — Atlas de Playas de Costa Rica</title>
 
@@ -31,7 +42,17 @@
             <p class="brand-sub" data-i18n="app.subtitle">Atlas Interactivo de Seguridad y Comportamiento Costero</p>
           </div>
         </div>
-        <div id="lang-switch" class="lang-switch" role="group" aria-label="Idioma / Language"></div>
+        <div class="brand-controls">
+          <button type="button" id="theme-toggle" class="theme-toggle-btn" data-i18n-aria="app.themeToggle" data-i18n-title="app.themeToggle" aria-label="Cambiar tema" title="Cambiar tema">
+            <span class="theme-icon-light" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            </span>
+            <span class="theme-icon-dark" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            </span>
+          </button>
+          <div id="lang-switch" class="lang-switch" role="group" aria-label="Idioma / Language"></div>
+        </div>
       </div>
 
       <div class="search-actions-wrap">

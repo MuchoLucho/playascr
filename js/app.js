@@ -26,6 +26,7 @@ import { FILTER_DEFS, filterBeaches, normalizeText } from './filters.js';
 import { BeachMap, LENS_OPTIONS } from './map.js';
 import { BeachDrawer, renderGuideModalContent } from './drawer.js';
 import { iconSvg } from './icons.js';
+import { initTheme, updateThemeLabels } from './theme.js';
 
 function escapeHtml(str) {
   return String(str ?? '')
@@ -332,12 +333,14 @@ async function boot() {
     applyFilters();
     beachMap.refreshTranslations();
     drawer.rerenderIfOpen();
+    updateThemeLabels();
     if (document.getElementById('guide-modal')?.classList.contains('open')) {
       renderGuideModalContent();
     }
   });
 
   // Initial render
+  initTheme();
   renderLanguageSwitch();
   renderFilterChips();
   renderLensSelect();

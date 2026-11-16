@@ -26,7 +26,10 @@
     "basemapSatellite": "Satélite",
     "basemapTopo": "Relieve",
     "lensLabel": "Indicador en mapa",
-    "legendTitle": "Leyenda"
+    "legendTitle": "Leyenda",
+    "themeToggle": "Cambiar tema",
+    "themeLight": "Cambiar a modo claro",
+    "themeDark": "Cambiar a modo oscuro"
   },
   "filters": {
     "all": "Todas",
