@@ -25,6 +25,7 @@ import {
 import { FILTER_DEFS, filterBeaches, normalizeText } from './filters.js';
 import { BeachMap, LENS_OPTIONS } from './map.js';
 import { BeachDrawer, renderGuideModalContent } from './drawer.js';
+import { iconSvg } from './icons.js';
 
 function escapeHtml(str) {
   return String(str ?? '')
@@ -142,7 +143,7 @@ async function boot() {
     if (!filterChipsEl) return;
     filterChipsEl.innerHTML = FILTER_DEFS.map(
       (f) =>
-        `<button type="button" class="chip ${f.id === activeFilter ? 'active' : ''}" data-filter="${escapeHtml(f.id)}"><span>${f.icon}</span><span>${escapeHtml(t(f.key))}</span></button>`
+        `<button type="button" class="chip ${f.id === activeFilter ? 'active' : ''}" data-filter="${escapeHtml(f.id)}"><span class="chip-icon">${iconSvg(f.iconName, { size: 15 })}</span><span>${escapeHtml(t(f.key))}</span></button>`
     ).join('');
 
     filterChipsEl.querySelectorAll('.chip').forEach((btn) => {

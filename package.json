@@ -13,7 +13,8 @@
   },
   "dependencies": {
     "leaflet": "^1.9.4",
-    "leaflet.markercluster": "^1.5.3"
+    "leaflet.markercluster": "^1.5.3",
+    "lucide": "^1.73.0"
   },
   "devDependencies": {
     "vite": "^6.2.0"

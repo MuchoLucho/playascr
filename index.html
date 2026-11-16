@@ -31,7 +31,7 @@
 
       <div class="search-actions-wrap">
         <div class="search-box">
-          <span class="search-icon" aria-hidden="true">🔍</span>
+          <span class="search-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
           <input
             type="search"
             id="search-input"
@@ -41,17 +41,17 @@
             data-i18n-aria="app.searchPlaceholder"
             placeholder="Buscar playa o lugar (ej. Tamarindo, Conchal, Manuel Antonio)..."
           >
-          <button type="button" id="clear-search" class="clear-btn" data-i18n-aria="app.clearSearch" aria-label="Limpiar búsqueda">×</button>
+          <button type="button" id="clear-search" class="clear-btn" data-i18n-aria="app.clearSearch" aria-label="Limpiar búsqueda"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
           <div id="search-results" class="search-results" role="listbox"></div>
         </div>
 
         <div class="header-actions">
           <button type="button" id="btn-guide" class="pill-btn primary">
-            <span aria-hidden="true">🌊</span>
+            <span class="btn-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/><circle cx="12" cy="12" r="4"/></svg></span>
             <span class="btn-text" data-i18n="app.guideBtn">Guía Resacas</span>
           </button>
           <button type="button" id="btn-about" class="pill-btn">
-            <span aria-hidden="true">ℹ️</span>
+            <span class="btn-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span>
             <span class="btn-text" data-i18n="app.aboutBtn">Fuente</span>
           </button>
         </div>
@@ -78,9 +78,9 @@
   <!-- Bottom-Right Zoom, GPS & Basemap Controls -->
   <div class="map-controls-right">
     <div class="fab-stack">
-      <button type="button" id="btn-zoom-in" class="fab-btn" aria-label="Acercar">+</button>
-      <button type="button" id="btn-zoom-out" class="fab-btn" aria-label="Alejar">−</button>
-      <button type="button" id="btn-locate" class="fab-btn" data-i18n-aria="app.locateMe" aria-label="Mi ubicación">◎</button>
+      <button type="button" id="btn-zoom-in" class="fab-btn" aria-label="Acercar"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button>
+      <button type="button" id="btn-zoom-out" class="fab-btn" aria-label="Alejar"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/></svg></button>
+      <button type="button" id="btn-locate" class="fab-btn" data-i18n-aria="app.locateMe" aria-label="Mi ubicación"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="2" x2="5" y1="12" y2="12"/><line x1="19" x2="22" y1="12" y2="12"/><line x1="12" x2="12" y1="2" y2="5"/><line x1="12" x2="12" y1="19" y2="22"/><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="3"/></svg></button>
     </div>
     <div class="basemap-toggle" role="group" data-i18n-aria="app.basemapLabel" aria-label="Mapa base">
       <button type="button" class="basemap-btn active" data-basemap="street" data-i18n="app.basemapStreet">Mapa</button>
@@ -97,7 +97,7 @@
         <h2 id="drawer-title" class="drawer-title"></h2>
         <div id="drawer-badges" class="drawer-badges"></div>
       </div>
-      <button type="button" id="drawer-close" class="drawer-close" data-i18n-aria="drawer.close" aria-label="Cerrar ficha">×</button>
+      <button type="button" id="drawer-close" class="drawer-close" data-i18n-aria="drawer.close" aria-label="Cerrar ficha"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
     </div>
     <div id="drawer-body" class="drawer-body"></div>
   </aside>
@@ -107,7 +107,7 @@
     <div class="modal-card">
       <div class="modal-header">
         <h2 id="guide-modal-title" data-i18n="guide.title">Guía de Corrientes de Resaca</h2>
-        <button type="button" class="drawer-close" data-close-modal="guide-modal" aria-label="Cerrar">×</button>
+        <button type="button" class="drawer-close" data-close-modal="guide-modal" aria-label="Cerrar"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
       </div>
       <div id="guide-modal-body" class="modal-body"></div>
     </div>
@@ -118,7 +118,7 @@
     <div class="modal-card">
       <div class="modal-header">
         <h2 id="about-modal-title" data-i18n="about.title">Fuente y Atribución de Datos</h2>
-        <button type="button" class="drawer-close" data-close-modal="about-modal" aria-label="Cerrar">×</button>
+        <button type="button" class="drawer-close" data-close-modal="about-modal" aria-label="Cerrar"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
       </div>
       <div class="modal-body">
         <p style="margin:0" data-i18n="about.text1"></p>

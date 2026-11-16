@@ -17,46 +17,46 @@
 import { t } from './i18n.js';
 
 export const FILTER_DEFS = [
-  { id: 'all', icon: '🗺️', key: 'filters.all', predicate: () => true },
+  { id: 'all', iconName: 'map', key: 'filters.all', predicate: () => true },
   {
     id: 'familySafe',
-    icon: '🛡️',
+    iconName: 'family',
     key: 'filters.familySafe',
     predicate: (b) => b.family === 'adecuada'
   },
   {
     id: 'swimSafe',
-    icon: '🏊',
+    iconName: 'swim',
     key: 'filters.swimSafe',
     predicate: (b) => b.swim === 'favorable'
   },
   {
     id: 'surf',
-    icon: '🏄',
+    iconName: 'surf',
     key: 'filters.surf',
     predicate: (b) => b.surf === 'favorable' || (b.uses && b.uses.includes('surf'))
   },
   {
     id: 'snorkel',
-    icon: '🤿',
+    iconName: 'snorkel',
     key: 'filters.snorkel',
     predicate: (b) => b.uses && b.uses.includes('snorquel')
   },
   {
     id: 'vehicle',
-    icon: '🚗',
+    iconName: 'car',
     key: 'filters.vehicle',
     predicate: (b) => b.accessMode === 'vehiculo' && b.accessType !== 'restringido'
   },
   {
     id: 'whiteSand',
-    icon: '🏖️',
+    iconName: 'beach',
     key: 'filters.whiteSand',
     predicate: (b) => b.sand === 'blanca' || b.sand === 'blanca_negra'
   },
   {
     id: 'highHazard',
-    icon: '⚠️',
+    iconName: 'hazard',
     key: 'filters.highHazard',
     predicate: (b) =>
       b.rip === 'alto' ||

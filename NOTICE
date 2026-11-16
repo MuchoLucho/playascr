@@ -44,6 +44,11 @@ This software incorporates and depends on the following open-source libraries:
   License: MIT License
   Website: https://vite.dev/
 
+* Lucide Icons
+  Copyright (c) 2022-present Lucide Contributors
+  License: ISC License / MIT License
+  Website: https://lucide.dev/
+
 Offline data extraction and verification scripts (not bundled in runtime app)
 utilize:
 * PyMuPDF (fitz) - Artifex Software, Inc. (AGPLv3 / Commercial)

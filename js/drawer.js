@@ -15,6 +15,7 @@
  */
 
 import { getLocale, t } from './i18n.js';
+import { iconSvg } from './icons.js';
 
 const SAND_SWATCHES = {
   blanca: '#f8fafc',
@@ -232,19 +233,19 @@ export class BeachDrawer {
         <h3 class="section-heading">${escapeHtml(t('drawer.behaviorHeading'))}</h3>
         <div class="behavior-grid">
           <div class="behavior-card ${ripTone(b.rip)}">
-            <span class="behavior-card-label">🌊 ${escapeHtml(t('drawer.tideCard'))}</span>
+            <span class="behavior-card-label">${iconSvg('waves', { size: 15 })} ${escapeHtml(t('drawer.tideCard'))}</span>
             <span class="behavior-card-val">${escapeHtml(t(`rip.${b.rip}`))}</span>
           </div>
           <div class="behavior-card ${swimTone(b.swim)}">
-            <span class="behavior-card-label">🏊 ${escapeHtml(t('drawer.swimCard'))}</span>
+            <span class="behavior-card-label">${iconSvg('swim', { size: 15 })} ${escapeHtml(t('drawer.swimCard'))}</span>
             <span class="behavior-card-val">${escapeHtml(t(`swim.${b.swim}`))}</span>
           </div>
           <div class="behavior-card ${familyTone(b.family)}">
-            <span class="behavior-card-label">👨‍👩‍👧 ${escapeHtml(t('drawer.familyCard'))}</span>
+            <span class="behavior-card-label">${iconSvg('family', { size: 15 })} ${escapeHtml(t('drawer.familyCard'))}</span>
             <span class="behavior-card-val">${escapeHtml(t(`family.${b.family}`))}</span>
           </div>
           <div class="behavior-card ${surfTone(b.surf)}">
-            <span class="behavior-card-label">🏄 ${escapeHtml(t('drawer.surfCard'))}</span>
+            <span class="behavior-card-label">${iconSvg('surf', { size: 15 })} ${escapeHtml(t('drawer.surfCard'))}</span>
             <span class="behavior-card-val">${escapeHtml(t(`surf.${b.surf}`))}</span>
           </div>
         </div>
@@ -299,13 +300,13 @@ export class BeachDrawer {
       }
 
       <button type="button" class="action-btn primary" id="btn-inspect-sat" style="width:100%">
-        🛰️ ${escapeHtml(t('drawer.viewSatellite'))}
+        ${iconSvg('satellite', { size: 16 })} ${escapeHtml(t('drawer.viewSatellite'))}
       </button>
 
       <div class="action-row">
-        <a class="action-btn" href="${googleMapsUrl}" target="_blank" rel="noopener">📍 ${escapeHtml(t('drawer.openGoogleMaps'))}</a>
-        <a class="action-btn" href="${wazeUrl}" target="_blank" rel="noopener">🚗 ${escapeHtml(t('drawer.openWaze'))}</a>
-        <button type="button" class="action-btn" id="btn-share-beach">🔗 ${escapeHtml(t('drawer.shareBeach'))}</button>
+        <a class="action-btn" href="${googleMapsUrl}" target="_blank" rel="noopener">${iconSvg('googleMaps', { size: 15 })} ${escapeHtml(t('drawer.openGoogleMaps'))}</a>
+        <a class="action-btn" href="${wazeUrl}" target="_blank" rel="noopener">${iconSvg('waze', { size: 15 })} ${escapeHtml(t('drawer.openWaze'))}</a>
+        <button type="button" class="action-btn" id="btn-share-beach">${iconSvg('share', { size: 15 })} <span>${escapeHtml(t('drawer.shareBeach'))}</span></button>
       </div>
     `;
 
@@ -322,9 +323,9 @@ export class BeachDrawer {
         const url = `${window.location.origin}${window.location.pathname}#playa=${encodeURIComponent(b.id)}`;
         try {
           await navigator.clipboard.writeText(url);
-          shareBtn.textContent = '✓ ' + t('drawer.linkCopied');
+          shareBtn.innerHTML = `${iconSvg('check', { size: 15 })} <span>${escapeHtml(t('drawer.linkCopied'))}</span>`;
           setTimeout(() => {
-            shareBtn.textContent = '🔗 ' + t('drawer.shareBeach');
+            shareBtn.innerHTML = `${iconSvg('share', { size: 15 })} <span>${escapeHtml(t('drawer.shareBeach'))}</span>`;
           }, 1800);
         } catch {
           window.location.hash = `playa=${encodeURIComponent(b.id)}`;

@@ -126,6 +126,7 @@ The web application and its toolchain incorporate the following open-source depe
 | :--- | :--- | :--- | :--- |
 | **[Leaflet](https://leafletjs.com/)** (`v1.9.4`) | BSD 2-Clause | © 2010–2024 Vladimir Agafonkin, © 2010–2011 CloudMade | [Leaflet License](https://github.com/Leaflet/Leaflet/blob/main/LICENSE) |
 | **[Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster)** (`v1.5.3`) | MIT License | © 2012–2021 Dave Leaver | [Leaflet.markercluster License](https://github.com/Leaflet/Leaflet.markercluster/blob/master/MIT-LICENCE.txt) |
+| **[Lucide](https://lucide.dev/)** (`v1.x`) | ISC / MIT License | © 2022–present Lucide Contributors | [Lucide License](https://github.com/lucide-icons/lucide/blob/main/LICENSE) |
 | **[Vite](https://vite.dev/)** (`v6.x`) | MIT License | © 2019–present Evan You & Vite Contributors | [Vite License](https://github.com/vitejs/vite/blob/main/LICENSE) |
 | **[PyMuPDF](https://pymupdf.readthedocs.io/)** *(offline extraction script only)* | AGPLv3 / Commercial | © Artifex Software, Inc. | [PyMuPDF License](https://github.com/pymupdf/PyMuPDF/blob/master/COPYING) |
 | **[Pillow](https://python-pillow.org/)** *(offline extraction script only)* | HPND License | © 1997–2024 Secret Labs AB, Jeffrey A. Clark & contributors | [Pillow License](https://github.com/python-pillow/Pillow/blob/main/LICENSE) |
