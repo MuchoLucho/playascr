@@ -1,0 +1,21 @@
+{
+  "name": "playascr",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Costa Rica Interactive Beach Safety & Behavior Atlas (735 beaches, 30 sectors)",
+  "license": "Apache-2.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 8080",
+    "build": "vite build",
+    "preview": "vite preview --port 8080",
+    "verify:data": "python scripts/verify_data.py"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "leaflet.markercluster": "^1.5.3"
+  },
+  "devDependencies": {
+    "vite": "^6.2.0"
+  }
+}

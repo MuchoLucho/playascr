@@ -1,0 +1,17 @@
+{
+  "name": "Playas de Costa Rica — Atlas Interactivo de Seguridad",
+  "short_name": "Playas CR",
+  "description": "Mapa interactivo de las playas de Costa Rica con indicadores de marea, corrientes de resaca, natación, surf, seguridad familiar y accesos.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0b1e2d",
+  "theme_color": "#0d4f6b",
+  "icons": [
+    {
+      "src": "./assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

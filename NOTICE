@@ -1,0 +1,75 @@
+PlayasCR — Interactive Costa Rica Beach Safety & Behavior Atlas
+Copyright 2026 PlayasCR Contributors
+
+This product includes software developed by the PlayasCR project,
+licensed under the Apache License, Version 2.0.
+
+===============================================================================
+1. SCIENTIFIC RESEARCH & ATLAS DATA ATTRIBUTION
+===============================================================================
+The factual geographic dataset, rip-current hazard ratings, coastal behavior
+classifications, sand characteristics, and accessibility metrics are derived
+from the following scientific publication:
+
+  Atlas de Playas de Costa Rica con Énfasis en la Seguridad (2024)
+  Principal Investigator & Author: Dra. Isabel Arozarena Llopis
+  Institutional Affiliation: Programa RONMAC, Universidad Nacional (UNA) &
+                             Instituto Costarricense de Turismo (ICT)
+  Official Document Portal: https://ict.go.cr/
+
+NOTE: The factual indicator classifications are referenced and synthesized
+for public safety, tourist education, and scientific dissemination. The
+original Atlas publication, its verbatim chapters, and photographic figures
+remain the intellectual property of their authors/institutions and are NOT
+licensed under the Apache License 2.0.
+
+===============================================================================
+2. OPEN-SOURCE LIBRARIES & COMPONENTS
+===============================================================================
+This software incorporates and depends on the following open-source libraries:
+
+* Leaflet
+  Copyright (c) 2010-2024, Vladimir Agafonkin
+  Copyright (c) 2010-2011, CloudMade
+  License: BSD 2-Clause License
+  Website: https://leafletjs.com/
+
+* Leaflet.markercluster
+  Copyright (c) 2012-2021, Dave Leaver
+  License: MIT License
+  Website: https://github.com/Leaflet/Leaflet.markercluster
+
+* Vite
+  Copyright (c) 2019-present, Evan You & Vite Contributors
+  License: MIT License
+  Website: https://vite.dev/
+
+Offline data extraction and verification scripts (not bundled in runtime app)
+utilize:
+* PyMuPDF (fitz) - Artifex Software, Inc. (AGPLv3 / Commercial)
+* Pillow - Jeffrey A. Clark (Alex) & contributors (HPND License)
+* NumPy - NumPy Developers (BSD 3-Clause License)
+
+===============================================================================
+3. BASEMAP TILES & CARTOGRAPHIC DATA PROVIDERS
+===============================================================================
+This application presents map layers and imagery provided by:
+
+* OpenStreetMap
+  Map data (c) OpenStreetMap contributors
+  License: Open Database License (ODbL) 1.0 (https://www.openstreetmap.org/copyright)
+  Tile style: Creative Commons Attribution-ShareAlike 2.0 (CC-BY-SA 2.0)
+
+* CARTO
+  Basemap tiles (c) CARTO, (c) OpenStreetMap contributors
+  Terms & Attributions: https://carto.com/attributions
+
+* Esri World Imagery
+  Tiles (c) Esri — Source: Esri, Maxar, Earthstar Geographics,
+  and the GIS User Community
+  Website: https://www.esri.com/
+
+* OpenTopoMap
+  Map data (c) OpenStreetMap contributors, SRTM
+  Map style (c) OpenTopoMap (CC-BY-SA)
+  Website: https://opentopomap.org/

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0369a1">
+  <meta name="description" content="Mapa interactivo de las playas de Costa Rica con indicadores de comportamiento costero, corrientes de resaca, seguridad familiar, surf, accesos y color de arena.">
+  <title>PlayasCR — Atlas de Playas de Costa Rica</title>
+
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" type="image/svg+xml" href="./assets/icon.svg">
+
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <div id="map" role="application" aria-label="Mapa de Playas de Costa Rica"></div>
+
+  <!-- Floating Top Controls -->
+  <header class="top-shell">
+    <div class="top-row">
+      <div class="brand-bar">
+        <div class="brand-id">
+          <img src="./assets/icon.svg" alt="PlayasCR" class="brand-logo">
+          <div class="brand-text">
+            <h1 class="brand-title" data-i18n="app.title">Playas de Costa Rica</h1>
+            <p class="brand-sub" data-i18n="app.subtitle">Atlas Interactivo de Seguridad y Comportamiento Costero</p>
+          </div>
+        </div>
+        <div id="lang-switch" class="lang-switch" role="group" aria-label="Idioma / Language"></div>
+      </div>
+
+      <div class="search-actions-wrap">
+        <div class="search-box">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <input
+            type="search"
+            id="search-input"
+            autocomplete="off"
+            spellcheck="false"
+            data-i18n-placeholder="app.searchPlaceholder"
+            data-i18n-aria="app.searchPlaceholder"
+            placeholder="Buscar playa o lugar (ej. Tamarindo, Conchal, Manuel Antonio)..."
+          >
+          <button type="button" id="clear-search" class="clear-btn" data-i18n-aria="app.clearSearch" aria-label="Limpiar búsqueda">×</button>
+          <div id="search-results" class="search-results" role="listbox"></div>
+        </div>
+
+        <div class="header-actions">
+          <button type="button" id="btn-guide" class="pill-btn primary">
+            <span aria-hidden="true">🌊</span>
+            <span class="btn-text" data-i18n="app.guideBtn">Guía Resacas</span>
+          </button>
+          <button type="button" id="btn-about" class="pill-btn">
+            <span aria-hidden="true">ℹ️</span>
+            <span class="btn-text" data-i18n="app.aboutBtn">Fuente</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="chips-strip">
+      <div id="filter-chips" style="display:contents"></div>
+      <span id="beaches-count" class="count-pill"></span>
+    </div>
+  </header>
+
+  <!-- Bottom-Left Lens Selector & Legend -->
+  <div class="map-controls-left">
+    <div class="lens-card">
+      <div class="lens-row">
+        <span class="lens-label" data-i18n="app.lensLabel">Indicador en mapa</span>
+        <select id="lens-select" class="lens-select" aria-label="Indicador en mapa"></select>
+      </div>
+      <div id="legend-items" class="legend-items"></div>
+    </div>
+  </div>
+
+  <!-- Bottom-Right Zoom, GPS & Basemap Controls -->
+  <div class="map-controls-right">
+    <div class="fab-stack">
+      <button type="button" id="btn-zoom-in" class="fab-btn" aria-label="Acercar">+</button>
+      <button type="button" id="btn-zoom-out" class="fab-btn" aria-label="Alejar">−</button>
+      <button type="button" id="btn-locate" class="fab-btn" data-i18n-aria="app.locateMe" aria-label="Mi ubicación">◎</button>
+    </div>
+    <div class="basemap-toggle" role="group" data-i18n-aria="app.basemapLabel" aria-label="Mapa base">
+      <button type="button" class="basemap-btn active" data-basemap="street" data-i18n="app.basemapStreet">Mapa</button>
+      <button type="button" class="basemap-btn" data-basemap="satellite" data-i18n="app.basemapSatellite">Satélite</button>
+      <button type="button" class="basemap-btn" data-basemap="topo" data-i18n="app.basemapTopo">Relieve</button>
+    </div>
+  </div>
+
+  <!-- Responsive Beach Detail Drawer (Desktop Side Panel / Mobile Swipeable Sheet) -->
+  <aside id="beach-drawer" class="drawer" aria-live="polite">
+    <div id="drawer-handle" class="drawer-handle" aria-hidden="true"></div>
+    <div class="drawer-header">
+      <div class="drawer-title-wrap">
+        <h2 id="drawer-title" class="drawer-title"></h2>
+        <div id="drawer-badges" class="drawer-badges"></div>
+      </div>
+      <button type="button" id="drawer-close" class="drawer-close" data-i18n-aria="drawer.close" aria-label="Cerrar ficha">×</button>
+    </div>
+    <div id="drawer-body" class="drawer-body"></div>
+  </aside>
+
+  <!-- Educational Rip-Current Safety Guide Modal -->
+  <div id="guide-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="guide-modal-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 id="guide-modal-title" data-i18n="guide.title">Guía de Corrientes de Resaca</h2>
+        <button type="button" class="drawer-close" data-close-modal="guide-modal" aria-label="Cerrar">×</button>
+      </div>
+      <div id="guide-modal-body" class="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Source & Attribution Modal -->
+  <div id="about-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="about-modal-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 id="about-modal-title" data-i18n="about.title">Fuente y Atribución de Datos</h2>
+        <button type="button" class="drawer-close" data-close-modal="about-modal" aria-label="Cerrar">×</button>
+      </div>
+      <div class="modal-body">
+        <p style="margin:0" data-i18n="about.text1"></p>
+        <p style="margin:0" data-i18n="about.text2"></p>
+        <p style="margin:0;color:var(--text-muted);font-size:0.82rem" data-i18n="about.text3"></p>
+        <p style="margin:0;color:var(--text-muted);font-size:0.82rem" data-i18n="about.text4"></p>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+# Ignore large source PDF (>100 MB GitHub limit)
+ATLAS DE PLAYAS COSTA RICA web 2024.pdf
+*.pdf
+
+# Python cache & virtualenvs
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS & editor junk
+.DS_Store
+Thumbs.db
+*.tmp
+*:Zone.Identifier
+
+# Local secrets & API keys
+.env
+.env.*
+!.env.example
+js/config.local.js
+
+# Node & Vite build artifacts
+node_modules/
+dist/

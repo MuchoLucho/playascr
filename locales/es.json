@@ -1,0 +1,237 @@
+{
+  "meta": {
+    "code": "es",
+    "name": "Español",
+    "dir": "ltr"
+  },
+  "app": {
+    "title": "Playas de Costa Rica",
+    "subtitle": "Atlas Interactivo de Seguridad y Comportamiento Costero",
+    "guideBtn": "Guía de Resacas",
+    "aboutBtn": "Fuente",
+    "searchPlaceholder": "Buscar playa o lugar (ej. Tamarindo, Conchal, Manuel Antonio)...",
+    "clearSearch": "Limpiar búsqueda",
+    "beachesCount": "{shown} de {total} playas",
+    "sectorLoaded": "Sector {sector} cargado",
+    "zoomHint": "Acércate (zoom 13+) para ver indicadores detallados sobre cada playa",
+    "locateMe": "Mi ubicación",
+    "locatingError": "No se pudo obtener tu ubicación GPS.",
+    "basemapLabel": "Mapa base",
+    "basemapStreet": "Mapa",
+    "basemapSatellite": "Satélite",
+    "basemapTopo": "Relieve",
+    "lensLabel": "Indicador en mapa",
+    "legendTitle": "Leyenda"
+  },
+  "filters": {
+    "all": "Todas",
+    "familySafe": "Niños y Mayores",
+    "swimSafe": "Aptas para Nadar",
+    "surf": "Surf",
+    "snorkel": "Snórquel",
+    "vehicle": "Acceso Vehículo",
+    "whiteSand": "Arena Blanca",
+    "highHazard": "Riesgo Alto / Marea"
+  },
+  "lenses": {
+    "rip": "Resaca y Marea",
+    "family": "Niños y Mayores",
+    "swim": "Natación / Baño",
+    "surf": "Surf y Usos",
+    "access": "Accesos",
+    "sand": "Color de Arena"
+  },
+  "regions": {
+    "guanacaste_nicoya": "Guanacaste y Península de Nicoya",
+    "golfo_nicoya": "Golfo de Nicoya",
+    "pacifico_central": "Pacífico Central",
+    "pacifico_sur": "Pacífico Sur",
+    "caribe": "Caribe"
+  },
+  "rip": {
+    "bajo": "Bajo",
+    "medio": "Medio",
+    "alto": "Alto",
+    "muy_alto": "Muy alto",
+    "no_visitado": "No visitado"
+  },
+  "ripDesc": {
+    "bajo": "Baja probabilidad de corrientes de resaca fuertes según el estudio RONMAC-UNA.",
+    "medio": "Corrientes de resaca ocasionales o localizadas; mantén vigilancia en marea cambiante.",
+    "alto": "Alta incidencia de corrientes de resaca peligrosas. Extrema precaución al ingresar al mar.",
+    "muy_alto": "Peligrosidad máxima por corrientes de resaca frecuentes e intensas. Alto riesgo de ahogamiento.",
+    "no_visitado": "Playa no evaluada en campo (generalmente remota o de acceso difícil/restringido)."
+  },
+  "hazards": {
+    "oleaje_fuerte": "Oleaje fuerte",
+    "rocas_intermareales": "Rocas en zona intermareal",
+    "desembocadura": "Desembocadura de río",
+    "derrumbes": "Derrumbes / acantilados",
+    "corales": "Corales / arrecifes",
+    "animales_peligrosos": "Animales peligrosos",
+    "bloqueo_marea_alta": "Bloqueo en marea alta",
+    "contaminacion": "Contaminación",
+    "cables_peligrosos": "Cables peligrosos",
+    "ninguno_conocido": "Sin otros peligros mayores reportados"
+  },
+  "swim": {
+    "favorable": "Apta para nadar",
+    "precaucion": "Nadar con precaución",
+    "peligrosa": "No recomendada",
+    "desconocida": "Sin datos de campo"
+  },
+  "swimShort": {
+    "favorable": "Nado OK",
+    "precaucion": "Precaución",
+    "peligrosa": "No nadar",
+    "desconocida": "N/D"
+  },
+  "swimDesc": {
+    "favorable": "Corrientes bajas y ausencia de peligros severos registrados; respeta siempre las señales locales.",
+    "precaucion": "Oleaje o corrientes moderadas, rocas o corales cercanos. Nada solo en zonas con rompiente uniforme y nunca solo.",
+    "peligrosa": "Corrientes de resaca altas/muy altas u otros peligros severos (oleaje fuerte, desembocadura o fauna peligrosa).",
+    "desconocida": "No cuenta con valoración presencial de peligros; observa el mar antes de entrar."
+  },
+  "family": {
+    "adecuada": "Adecuada (Niños / Mayores)",
+    "supervision": "Supervisión estricta",
+    "no_recomendada": "No recomendada",
+    "desconocida": "Sin evaluar / Restringida"
+  },
+  "familyShort": {
+    "adecuada": "Familiar",
+    "supervision": "Supervisión",
+    "no_recomendada": "No apta fam.",
+    "desconocida": "N/D"
+  },
+  "familyDesc": {
+    "adecuada": "Playa relativamente protegida, riesgo bajo de resaca, acceso vehicular viable y sin bloqueo por marea.",
+    "supervision": "Riesgo moderado o acceso a pie/irregular; requiere supervisión constante de adultos y chaleco para niños.",
+    "no_recomendada": "No apta para niños o adultos mayores por corrientes fuertes, oleaje intenso, rocas/acantilados o acceso difícil.",
+    "desconocida": "Playa inaccesible, restringida o sin visita de campo."
+  },
+  "surf": {
+    "favorable": "Apta para Surf",
+    "posible": "Oleaje / Surf posible",
+    "calma": "Aguas calmas (no surf)"
+  },
+  "surfShort": {
+    "favorable": "Surf",
+    "posible": "Olas",
+    "calma": "Calma"
+  },
+  "uses": {
+    "ocio": "Ocio / recreación",
+    "surf": "Surf",
+    "snorquel": "Snórquel",
+    "caminatas": "Caminatas",
+    "pesca": "Pesca",
+    "tortugas": "Tortugas",
+    "kayak": "Kayak",
+    "kitesurf": "Kitesurf",
+    "windsurf": "Windsurf"
+  },
+  "accessType": {
+    "publico": "Acceso público",
+    "restringido": "Acceso restringido"
+  },
+  "accessMode": {
+    "vehiculo": "En vehículo",
+    "pie": "A pie",
+    "bote": "En bote"
+  },
+  "accessState": {
+    "bueno": "Buen estado",
+    "medio": "Estado medio / lastre",
+    "malo": "Mal estado / difícil",
+    "consultar_desembarco": "Consultar desembarco"
+  },
+  "sand": {
+    "blanca": "Blanca",
+    "negra": "Negra",
+    "blanca_negra": "Blanca y negra",
+    "parda_clara": "Parda clara",
+    "parda": "Parda",
+    "parda_oscura": "Parda oscura",
+    "parda_rojiza": "Parda rojiza",
+    "sin_datos": "Sin dato"
+  },
+  "geo": {
+    "recta_abierta": "Recta y abierta",
+    "herradura_grande": "Herradura grande",
+    "herradura_pequena": "Herradura pequeña",
+    "rocosa": "Rocosa",
+    "fluvial": "Fluvial / desembocadura",
+    "manglar": "Manglar"
+  },
+  "infra": {
+    "deshabitada": "Deshabitada",
+    "resort_hotel": "Hotel / restaurante / resort",
+    "viviendas": "Viviendas cercanas",
+    "varios_servicios": "Pueblo / varios servicios",
+    "sin_datos": "Sin datos"
+  },
+  "drawer": {
+    "close": "Cerrar ficha",
+    "sectorLabel": "Mapa {sector}",
+    "altNames": "Otros nombres",
+    "ignName": "Topónimo IGN",
+    "visited": "Visitada en campo",
+    "notVisited": "No visitada / remota",
+    "behaviorHeading": "Comportamiento y Seguridad",
+    "tideCard": "Marea y Corrientes de Resaca",
+    "swimCard": "Natación / Baño",
+    "familyCard": "Niños y Adultos Mayores",
+    "surfCard": "Surf y Actividades",
+    "tideCutoffWarn": "⚠️ Precaución de marea: Riesgo de bloqueo al subir la marea.",
+    "riverMouthWarn": "⚠️ Desembocadura cercana: Corrientes variables y posible fauna.",
+    "intertidalRocksWarn": "⚠️ Rocas intermareales: Atención en marea baja o rompiente.",
+    "techHeading": "Ficha Técnica del Atlas",
+    "accessLabel": "Acceso",
+    "sandGeoLabel": "Arena y Geomorfología",
+    "infraLabel": "Infraestructura",
+    "protectedLabel": "Área Protegida (SINAC)",
+    "otherHazardsLabel": "Otros peligros",
+    "usesLabel": "Usos principales",
+    "sectorNotesHeading": "Contexto Costero del Sector",
+    "viewSatellite": "Ver zona de rompientes en Satélite",
+    "openGoogleMaps": "Google Maps",
+    "openWaze": "Waze",
+    "shareBeach": "Compartir",
+    "linkCopied": "¡Enlace copiado!",
+    "noProtected": "Fuera de área protegida o sin registro SINAC en mapa"
+  },
+  "guide": {
+    "title": "Cómo Reconocer una Corriente de Resaca y Reglas de Seguridad",
+    "intro": "Según la metodología de la Dra. Isabel Arozarena Llopis (RONMAC–UNA / ICT), muchas víctimas confunden las zonas sin olas con lugares seguros, cuando en realidad suelen ocultar canales de corriente hacia mar adentro.",
+    "visualTitle": "4 Señales Visuales en la Playa",
+    "plumeTitle": "1. Plumas de Sedimento",
+    "plumeDesc": "Manchas color café o arena en suspensión saliendo más allá de la línea donde rompen las olas.",
+    "sandyChannelTitle": "2. Canales Arenosos (Sin Olas)",
+    "sandyChannelDesc": "Franja angosta donde las olas no rompen o rompen menos que a los lados. ¡Es la zona más peligrosa!",
+    "rockyChannelTitle": "3. Canales Rocosos",
+    "rockyChannelDesc": "Discontinuidades entre plataformas de roca o promontorios; generan corrientes persistentes siempre en el mismo punto.",
+    "cuspTitle": "4. Cúspides de Playa",
+    "cuspDesc": "Ondulaciones regulares (montes y valles) en la arena; las corrientes suelen canalizarse frente a los valles.",
+    "rulesTitle": "9 Recomendaciones Clave para Bañistas y Familias",
+    "rules": [
+      "Atender siempre la señalización de peligro en las playas.",
+      "Evitar entrar al mar inmediatamente después de ingerir alimentos.",
+      "Observar en marea baja depresiones o pozas que luego quedan ocultas en marea alta.",
+      "No arriesgarse a escalar acantilados o rocas resbaladizas.",
+      "Evitar desembocaduras de ríos y los sectores donde las olas NO rompen.",
+      "Si no hay guardavidas, preguntar a personas locales dónde es más seguro bañarse.",
+      "Tener especial cautela en playas remotas alejadas de centros médicos.",
+      "Nunca descuidar a los niños cerca del agua.",
+      "Hacer que los niños utilicen chaleco salvavidas: es económico y puede salvarles la vida."
+    ],
+    "escapeTip": "Si te atrapa una corriente: mantén la calma, NO nades contra ella hacia la orilla; nada en paralelo a la costa hasta salir del canal o déjate llevar flotando hasta que pierda fuerza y regresa donde rompen las olas."
+  },
+  "about": {
+    "title": "Fuente de Datos y Atribución",
+    "text1": "Los datos cartográficos, clasificaciones de peligrosidad por corrientes de resaca, accesos, colores de arena, geomorfología y usos provienen del \"Atlas de Playas de Costa Rica con Énfasis en la Seguridad\" (2024), elaborado por la geomorfóloga costera Dra. Isabel Arozarena Llopis (Programa RONMAC, Universidad Nacional de Costa Rica) con apoyo del Instituto Costarricense de Turismo (ICT).",
+    "text2": "Nota de seguridad: Las condiciones costeras, el estado de los caminos, la presencia de guardavidas y los canales de corriente cambian con la marea, el oleaje y las estaciones. Esta aplicación es una herramienta informativa de referencia y no sustituye la observación en sitio ni las indicaciones de autoridades o guardavidas.",
+    "text3": "Las imágenes satelitales corresponden a Esri World Imagery y la cartografía base a OpenStreetMap / CARTO / OpenTopoMap. Bibliotecas web: Leaflet (BSD-2) y Leaflet.markercluster (MIT).",
+    "text4": "Licencia del software: El código fuente y arquitectura web están licenciados bajo Apache 2.0. Las investigaciones científicas, indicadores y clasificaciones del Atlas son propiedad intelectual de la Dra. Isabel Arozarena Llopis (Programa RONMAC–UNA / ICT) y no se licencian bajo Apache 2.0."
+  }
+}

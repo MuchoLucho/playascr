@@ -1,0 +1,237 @@
+{
+  "meta": {
+    "code": "en",
+    "name": "English",
+    "dir": "ltr"
+  },
+  "app": {
+    "title": "Costa Rica Beaches",
+    "subtitle": "Interactive Coastal Safety & Beach Behavior Atlas",
+    "guideBtn": "Rip Current Guide",
+    "aboutBtn": "Source",
+    "searchPlaceholder": "Search beach or place (e.g., Tamarindo, Conchal, Manuel Antonio)...",
+    "clearSearch": "Clear search",
+    "beachesCount": "{shown} of {total} beaches",
+    "sectorLoaded": "Sector {sector} loaded",
+    "zoomHint": "Zoom in (13+) to view live beach behavior badges on the map",
+    "locateMe": "My location",
+    "locatingError": "Unable to retrieve your GPS location.",
+    "basemapLabel": "Basemap",
+    "basemapStreet": "Map",
+    "basemapSatellite": "Satellite",
+    "basemapTopo": "Terrain",
+    "lensLabel": "Map Indicator",
+    "legendTitle": "Legend"
+  },
+  "filters": {
+    "all": "All",
+    "familySafe": "Kids & Seniors",
+    "swimSafe": "Swimmable",
+    "surf": "Surf",
+    "snorkel": "Snorkel",
+    "vehicle": "Car Access",
+    "whiteSand": "White Sand",
+    "highHazard": "High Risk / Tide"
+  },
+  "lenses": {
+    "rip": "Rip Currents & Tide",
+    "family": "Kids & Seniors",
+    "swim": "Swimming",
+    "surf": "Surf & Activities",
+    "access": "Access",
+    "sand": "Sand Color"
+  },
+  "regions": {
+    "guanacaste_nicoya": "Guanacaste & Nicoya Peninsula",
+    "golfo_nicoya": "Gulf of Nicoya",
+    "pacifico_central": "Central Pacific",
+    "pacifico_sur": "South Pacific",
+    "caribe": "Caribbean"
+  },
+  "rip": {
+    "bajo": "Low",
+    "medio": "Moderate",
+    "alto": "High",
+    "muy_alto": "Very high",
+    "no_visitado": "Not surveyed"
+  },
+  "ripDesc": {
+    "bajo": "Low probability of strong rip currents based on the RONMAC-UNA coastal assessment.",
+    "medio": "Occasional or localized rip currents; stay alert during changing tides.",
+    "alto": "High incidence of hazardous rip currents. Exercise extreme caution in the water.",
+    "muy_alto": "Maximum hazard due to frequent, strong rip currents. High drowning risk.",
+    "no_visitado": "Not field-surveyed (typically remote or difficult/restricted access)."
+  },
+  "hazards": {
+    "oleaje_fuerte": "Heavy surf / strong waves",
+    "rocas_intermareales": "Intertidal rocks",
+    "desembocadura": "River mouth currents",
+    "derrumbes": "Cliff rockfalls / landslides",
+    "corales": "Coral reefs",
+    "animales_peligrosos": "Dangerous wildlife",
+    "bloqueo_marea_alta": "High-tide cutoff",
+    "contaminacion": "Pollution",
+    "cables_peligrosos": "Hazardous cables",
+    "ninguno_conocido": "No other major hazards reported"
+  },
+  "swim": {
+    "favorable": "Good for swimming",
+    "precaucion": "Swim with caution",
+    "peligrosa": "Not recommended",
+    "desconocida": "Not field-surveyed"
+  },
+  "swimShort": {
+    "favorable": "Swim OK",
+    "precaucion": "Caution",
+    "peligrosa": "Unsafe",
+    "desconocida": "N/A"
+  },
+  "swimDesc": {
+    "favorable": "Low rip-current risk and no severe hazards recorded; always follow local signage.",
+    "precaucion": "Moderate waves/currents or nearby rocks/reefs. Swim only where waves break evenly and never alone.",
+    "peligrosa": "High or very high rip currents or severe hazards (heavy shorebreak, river mouth, or dangerous wildlife).",
+    "desconocida": "No in-person hazard survey recorded; carefully inspect ocean conditions first."
+  },
+  "family": {
+    "adecuada": "Suitable (Kids & Seniors)",
+    "supervision": "Strict supervision",
+    "no_recomendada": "Not recommended",
+    "desconocida": "Unsurveyed / Restricted"
+  },
+  "familyShort": {
+    "adecuada": "Family OK",
+    "supervision": "Supervise",
+    "no_recomendada": "Not fam.",
+    "desconocida": "N/A"
+  },
+  "familyDesc": {
+    "adecuada": "Relatively sheltered bay, low rip hazard, viable vehicle access, and no high-tide cutoff risk.",
+    "supervision": "Moderate hazard or walk-in/rough access; requires constant adult supervision and lifejackets for children.",
+    "no_recomendada": "Not suitable for children or older adults due to strong currents, heavy surf, rocks/cliffs, or difficult access.",
+    "desconocida": "Inaccessible, restricted, or unsurveyed beach."
+  },
+  "surf": {
+    "favorable": "Good for Surfing",
+    "posible": "Waves / Possible Surf",
+    "calma": "Calm Waters (No Surf)"
+  },
+  "surfShort": {
+    "favorable": "Surf",
+    "posible": "Waves",
+    "calma": "Calm"
+  },
+  "uses": {
+    "ocio": "Leisure / beachgoing",
+    "surf": "Surfing",
+    "snorquel": "Snorkeling",
+    "caminatas": "Walking / hiking",
+    "pesca": "Fishing",
+    "tortugas": "Sea turtles",
+    "kayak": "Kayaking",
+    "kitesurf": "Kitesurfing",
+    "windsurf": "Windsurfing"
+  },
+  "accessType": {
+    "publico": "Public access",
+    "restringido": "Restricted access"
+  },
+  "accessMode": {
+    "vehiculo": "By vehicle",
+    "pie": "On foot",
+    "bote": "By boat"
+  },
+  "accessState": {
+    "bueno": "Good road",
+    "medio": "Fair / gravel road",
+    "malo": "Poor / rough road",
+    "consultar_desembarco": "Check landing conditions"
+  },
+  "sand": {
+    "blanca": "White",
+    "negra": "Black",
+    "blanca_negra": "White & black",
+    "parda_clara": "Light brown",
+    "parda": "Brown",
+    "parda_oscura": "Dark brown",
+    "parda_rojiza": "Reddish brown",
+    "sin_datos": "Unlisted"
+  },
+  "geo": {
+    "recta_abierta": "Straight & open",
+    "herradura_grande": "Large horseshoe bay",
+    "herradura_pequena": "Small horseshoe bay",
+    "rocosa": "Rocky",
+    "fluvial": "Fluvial / river mouth",
+    "manglar": "Mangrove"
+  },
+  "infra": {
+    "deshabitada": "Uninhabited",
+    "resort_hotel": "Hotel / restaurant / resort",
+    "viviendas": "Nearby homes",
+    "varios_servicios": "Town / multiple services",
+    "sin_datos": "No data"
+  },
+  "drawer": {
+    "close": "Close panel",
+    "sectorLabel": "Map {sector}",
+    "altNames": "Other names",
+    "ignName": "IGN Toponym",
+    "visited": "Field surveyed",
+    "notVisited": "Not surveyed / remote",
+    "behaviorHeading": "Beach Behavior & Safety",
+    "tideCard": "Tide & Rip Currents",
+    "swimCard": "Swimming Suitability",
+    "familyCard": "Children & Seniors",
+    "surfCard": "Surfing & Activities",
+    "tideCutoffWarn": "⚠️ Tide alert: Risk of getting cut off at high tide.",
+    "riverMouthWarn": "⚠️ River mouth nearby: Shifting currents and potential wildlife.",
+    "intertidalRocksWarn": "⚠️ Intertidal rocks: Watch out at low tide or in breaking waves.",
+    "techHeading": "Atlas Technical Profile",
+    "accessLabel": "Access",
+    "sandGeoLabel": "Sand & Morphology",
+    "infraLabel": "Infrastructure",
+    "protectedLabel": "Protected Area (SINAC)",
+    "otherHazardsLabel": "Other hazards",
+    "usesLabel": "Primary uses",
+    "sectorNotesHeading": "Coastal Sector Context",
+    "viewSatellite": "Inspect Surf Zone on Satellite",
+    "openGoogleMaps": "Google Maps",
+    "openWaze": "Waze",
+    "shareBeach": "Share",
+    "linkCopied": "Link copied!",
+    "noProtected": "Outside mapped SINAC protected area"
+  },
+  "guide": {
+    "title": "How to Spot Rip Currents & Beach Safety Rules",
+    "intro": "Per Dr. Isabel Arozarena Llopis's methodology (RONMAC–UNA / ICT), swimmers often mistake calm gaps in breaking waves for safe zones, when they actually mark dangerous seaward rip-current channels.",
+    "visualTitle": "4 Visual Clues at the Beach",
+    "plumeTitle": "1. Sediment Plumes",
+    "plumeDesc": "Brownish or sandy clouds of suspended sediment pushed seaward past the surf zone.",
+    "sandyChannelTitle": "2. Sandy Channels (Calm Gaps)",
+    "sandyChannelDesc": "A narrow gap where waves break less or not at all compared to adjacent areas. Most dangerous spot!",
+    "rockyChannelTitle": "3. Rocky Channels",
+    "rockyChannelDesc": "Gaps in submerged rocky platforms or near headlands; currents here stay fixed in the same spot.",
+    "cuspTitle": "4. Beach Cusps",
+    "cuspDesc": "Regular ridges and troughs along the sand; rip currents commonly form opposite the troughs.",
+    "rulesTitle": "9 Essential Rules for Swimmers & Families",
+    "rules": [
+      "Always obey warning signs posted at the beach.",
+      "Avoid entering the water immediately after a heavy meal.",
+      "Observe depressions and channels at low tide so you avoid them when the tide rises.",
+      "Do not climb slippery coastal cliffs or rocky headlands.",
+      "Stay away from river mouths and sections where waves do NOT break.",
+      "Where no lifeguards are present, ask locals where it is safest to swim.",
+      "Be extra cautious at remote beaches far from medical facilities.",
+      "Never leave children unattended near the water.",
+      "Have children wear a lifejacket—it is inexpensive and saves lives."
+    ],
+    "escapeTip": "If caught in a rip current: stay calm, do NOT swim against it toward shore; swim parallel to the beach to exit the channel, or float until it weakens and return where waves are breaking."
+  },
+  "about": {
+    "title": "Data Source & Attribution",
+    "text1": "Cartographic data, rip-current hazard ratings, access profiles, sand colors, geomorphology, and beach uses are derived from the \"Atlas de Playas de Costa Rica con Énfasis en la Seguridad\" (2024) by coastal geomorphologist Dr. Isabel Arozarena Llopis (RONMAC Program, Universidad Nacional de Costa Rica) with the Costa Rican Tourism Board (ICT).",
+    "text2": "Safety disclaimer: Coastal conditions, road access, lifeguard presence, and rip channels change continuously with tides, swells, and seasons. This tool is an informational guide and does not replace on-site observation or instructions from lifeguards and local authorities.",
+    "text3": "Satellite imagery provided by Esri World Imagery; base maps by OpenStreetMap, CARTO, and OpenTopoMap. Web libraries: Leaflet (BSD-2) and Leaflet.markercluster (MIT).",
+    "text4": "Software License: The application source code and web architecture are licensed under Apache 2.0. The underlying scientific research, indicators, and Atlas classifications belong to Dr. Isabel Arozarena Llopis (RONMAC–UNA / ICT) and are not licensed under Apache 2.0."
+  }
+}
