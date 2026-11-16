@@ -94,8 +94,13 @@
     </div>
   </header>
 
-  <!-- Bottom-Left Lens Selector & Legend -->
+  <!-- Bottom-Left Map Layer & Indicator Controls -->
   <div class="map-controls-left">
+    <div class="basemap-toggle" role="group" data-i18n-aria="app.basemapLabel" aria-label="Mapa base">
+      <button type="button" class="basemap-btn active" data-basemap="street" data-i18n="app.basemapStreet">Mapa</button>
+      <button type="button" class="basemap-btn" data-basemap="satellite" data-i18n="app.basemapSatellite">Satélite</button>
+      <button type="button" class="basemap-btn" data-basemap="topo" data-i18n="app.basemapTopo">Relieve</button>
+    </div>
     <div class="lens-card">
       <div class="lens-row">
         <span class="lens-label" data-i18n="app.lensLabel">Indicador en mapa</span>
@@ -110,13 +115,8 @@
     </a>
   </div>
 
-  <!-- Bottom-Right Zoom, GPS & Basemap Controls -->
+  <!-- Bottom-Right Zoom & GPS FAB Controls -->
   <div class="map-controls-right">
-    <div class="basemap-toggle" role="group" data-i18n-aria="app.basemapLabel" aria-label="Mapa base">
-      <button type="button" class="basemap-btn active" data-basemap="street" data-i18n="app.basemapStreet">Mapa</button>
-      <button type="button" class="basemap-btn" data-basemap="satellite" data-i18n="app.basemapSatellite">Satélite</button>
-      <button type="button" class="basemap-btn" data-basemap="topo" data-i18n="app.basemapTopo">Relieve</button>
-    </div>
     <div class="fab-stack">
       <button type="button" id="btn-zoom-in" class="fab-btn" aria-label="Acercar"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button>
       <button type="button" id="btn-zoom-out" class="fab-btn" aria-label="Alejar"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/></svg></button>
