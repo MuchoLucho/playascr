@@ -65,6 +65,8 @@ This document tracks the architecture, extraction pipeline, data schemas, intern
 - [x] Step 5: Build responsive web app (`index.html`, `css/styles.css`, `js/*.js`, `manifest.json`, `sw.js`, `README.md`)
 - [x] Step 6: Automated & live browser verification (desktop `1440x900` + mobile `390x844`) and final `AGENTS.md` update
 - [x] Step 7: Migrate frontend dependencies & GitHub Pages CI build to `npm` + `Vite` (`package.json`, `vite.config.js`, `.github/workflows/deploy.yml`, bundled `leaflet` & `leaflet.markercluster`, `sw.js` `playascr-v3`)
+- [x] Step 8: Verified beach photo catalog (84 beaches) via Wikimedia Commons CDN (`data/beach-photos.json`, `scripts/verify_photos.py`, zero GitHub Pages quota overhead)
+- [x] Step 9: Responsive dark/light mode toggle with native CSS `light-dark()` tokens, system preference sync, and map tile filter
 
 ---
 
