@@ -15,37 +15,33 @@
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
   <defs>
-    <!-- Costa Rica Flag Blue gradient background -->
-    <linearGradient id="crSky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#002169"/>
-      <stop offset="100%" stop-color="#003882"/>
+    <!-- Official Costa Rica Blue gradient (Sky / Deep Ocean) -->
+    <linearGradient id="crBlue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#001f5c"/>
+      <stop offset="100%" stop-color="#002b7f"/>
     </linearGradient>
-    <!-- Golden Sand gradient -->
-    <linearGradient id="crSand" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#fde68a"/>
-      <stop offset="100%" stop-color="#f59e0b"/>
+    <!-- Foreground Costa Rica Blue -->
+    <linearGradient id="crBlueDeep" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#002b7f"/>
+      <stop offset="100%" stop-color="#001845"/>
     </linearGradient>
-    <!-- Red stripe/wave drop shadow -->
-    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
-      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.3"/>
-    </filter>
   </defs>
 
-  <!-- App Icon Base: Costa Rica Blue -->
-  <rect width="128" height="128" rx="28" fill="url(#crSky)"/>
+  <!-- App Icon Base: Costa Rica Blue (Upper Blue: 1 part) -->
+  <rect width="128" height="128" rx="28" fill="url(#crBlue)"/>
 
-  <!-- Tropical Sun in the sky -->
-  <circle cx="96" cy="30" r="12" fill="#fef08a" opacity="0.95"/>
+  <!-- Pure White Sun in the sky -->
+  <circle cx="96" cy="30" r="12" fill="#ffffff" opacity="0.95"/>
 
-  <!-- Upper White Wave Stripe -->
-  <path d="M8 58 Q34 46 62 56 T120 50" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" opacity="0.95"/>
+  <!-- Top White Wave Stripe (Flag Upper White band: 1 part) -->
+  <path d="M6 56 Q34 42 64 53 T122 48" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
 
-  <!-- Central Costa Rica Red Wave (Double Width Flag Element) -->
-  <path d="M8 72 C32 54 58 74 88 62 C102 56 112 59 120 62 L120 86 C105 84 88 88 72 82 C48 74 28 88 8 86 Z" fill="#ce1126" filter="url(#shadow)"/>
+  <!-- Center Red Wave (Flag Central Red band: 2 parts / double-width) -->
+  <path d="M6 68 C32 50 58 72 88 58 C102 52 114 56 122 60 L122 88 C106 84 88 90 72 84 C48 76 28 90 6 88 Z" fill="#ce1126"/>
 
-  <!-- Lower White Surf Crest -->
-  <path d="M8 87 Q36 76 66 84 T120 78" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.98"/>
+  <!-- Lower White Surf Line (Flag Lower White band: 1 part) -->
+  <path d="M6 89 Q36 78 66 86 T122 80" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
 
-  <!-- Warm Golden Sand Shoreline -->
-  <path d="M8 94 Q36 82 66 90 T120 84 L120 120 L8 120 Z" fill="url(#crSand)"/>
+  <!-- Lower Ocean Wave Base (Flag Lower Blue band: 1 part) -->
+  <path d="M6 95 Q36 84 66 92 T122 86 L122 122 L6 122 Z" fill="url(#crBlueDeep)"/>
 </svg>
