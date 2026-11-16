@@ -20,6 +20,7 @@ import 'leaflet/dist/leaflet.css';
 import 'leaflet.markercluster/dist/MarkerCluster.css';
 import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
 import { t } from './i18n.js';
+import { iconSvg } from './icons.js';
 
 export const LENS_OPTIONS = ['rip', 'family', 'swim', 'surf', 'access', 'sand'];
 
@@ -516,16 +517,16 @@ export class BeachMap {
 
       const surfBadge =
         beach.surf === 'favorable'
-          ? `<span class="mini-badge surf">🏄 ${escapeHtml(t('surfShort.favorable'))}</span>`
+          ? `<span class="mini-badge surf">${iconSvg('surf', { size: 11, strokeWidth: 2.2 })}<span>${escapeHtml(t('surfShort.favorable'))}</span></span>`
           : '';
 
       const html = `
         <div class="beach-pill" data-beach-id="${escapeHtml(beach.id)}">
           <div class="beach-pill-name">${escapeHtml(beach.name)}</div>
           <div class="beach-pill-badges">
-            <span class="mini-badge ${ripClass}">🌊 ${escapeHtml(t(`rip.${beach.rip}`))}</span>
-            <span class="mini-badge ${swimClass}">🏊 ${escapeHtml(t(`swimShort.${beach.swim}`))}</span>
-            <span class="mini-badge ${famClass}">👨‍👩‍👧 ${escapeHtml(t(`familyShort.${beach.family}`))}</span>
+            <span class="mini-badge ${ripClass}">${iconSvg('waves', { size: 11, strokeWidth: 2.2 })}<span>${escapeHtml(t(`rip.${beach.rip}`))}</span></span>
+            <span class="mini-badge ${swimClass}">${iconSvg('swim', { size: 11, strokeWidth: 2.2 })}<span>${escapeHtml(t(`swimShort.${beach.swim}`))}</span></span>
+            <span class="mini-badge ${famClass}">${iconSvg('family', { size: 11, strokeWidth: 2.2 })}<span>${escapeHtml(t(`familyShort.${beach.family}`))}</span></span>
             ${surfBadge}
           </div>
         </div>

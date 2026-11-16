@@ -835,6 +835,9 @@ select {
   font-size: 0.8rem;
   font-weight: 600;
   line-height: 1.35;
+  display: flex;
+  align-items: center;
+  gap: 7px;
 }
 
 /* Technical Sheet List */
@@ -962,8 +965,16 @@ select {
 }
 
 .mini-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
   padding: 1px 5px;
   border-radius: 99px;
+  line-height: 1.2;
+}
+
+.mini-badge .lucide-icon {
+  flex-shrink: 0;
 }
 
 .mini-badge.low {

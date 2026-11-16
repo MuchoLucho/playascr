@@ -174,7 +174,7 @@ export class BeachDrawer {
     const badges = [
       `<span class="tag sector">${escapeHtml(t('drawer.sectorLabel', { sector: b.sector }))}</span>`,
       `<span class="tag">${escapeHtml(t(`regions.${b.region}`))}</span>`,
-      `<span class="tag">${b.visited ? '✓ ' + escapeHtml(t('drawer.visited')) : '• ' + escapeHtml(t('drawer.notVisited'))}</span>`
+      `<span class="tag" style="display:inline-flex;align-items:center;gap:4px;">${b.visited ? iconSvg('check', { size: 12, strokeWidth: 2.5 }) + '<span>' + escapeHtml(t('drawer.visited')) + '</span>' : '• <span>' + escapeHtml(t('drawer.notVisited')) + '</span>'}</span>`
     ];
     this.badgesEl.innerHTML = badges.join('');
 
@@ -250,7 +250,7 @@ export class BeachDrawer {
           </div>
         </div>
         <p class="behavior-note">${escapeHtml(t(`ripDesc.${b.rip}`))} ${escapeHtml(t(`familyDesc.${b.family}`))}</p>
-        ${tideAlerts.map((a) => `<div class="alert-box">${escapeHtml(a)}</div>`).join('')}
+        ${tideAlerts.map((a) => `<div class="alert-box">${iconSvg('hazard', { size: 16, strokeWidth: 2 })}<span>${escapeHtml(a)}</span></div>`).join('')}
       </div>
 
       <div>
