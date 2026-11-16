@@ -109,7 +109,8 @@ limitations under the License.
 > **The underlying research, coastal indicators, safety ratings, and cartographic data from the *Atlas de Playas de Costa Rica con Énfasis en la Seguridad* (2024) are NOT licensed under Apache 2.0.**
 
 - **Principal Investigator & Author**: Dra. Isabel Arozarena Llopis (Coastal Geomorphologist).
-- **Institutions**: Programa RONMAC – Universidad Nacional de Costa Rica (UNA) & Instituto Costarricense de Turismo (ICT) ([ict.go.cr](https://www.ict.go.cr/)).
+- **Institutions**: Programa RONMAC – Universidad Nacional de Costa Rica (UNA) & Instituto Costarricense de Turismo (ICT) ([ict.go.cr/es/servicios-institucionales/atlas-de-playas.html](https://www.ict.go.cr/es/servicios-institucionales/atlas-de-playas.html)).
+- **Official Publication Portal**: [ICT — Atlas de Playas de Costa Rica](https://www.ict.go.cr/es/servicios-institucionales/atlas-de-playas.html)
 - **Citation**: Arozarena Llopis, I. (2024). *Atlas de Playas de Costa Rica con Énfasis en la Seguridad*. Programa RONMAC–UNA & ICT, San José, Costa Rica.
 - **Copyright-Safe Policy**:
   - All factual geographic data, rip-current hazard classifications, access classifications, and sand characteristics are synthesized and referenced exclusively for **public beach safety, tourist awareness, and scientific dissemination**.

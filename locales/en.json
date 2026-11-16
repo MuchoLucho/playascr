@@ -230,6 +230,7 @@
   "about": {
     "title": "Data Source & Attribution",
     "text1": "Cartographic data, rip-current hazard ratings, access profiles, sand colors, geomorphology, and beach uses are derived from the \"Atlas de Playas de Costa Rica con Énfasis en la Seguridad\" (2024) by coastal geomorphologist Dr. Isabel Arozarena Llopis (RONMAC Program, Universidad Nacional de Costa Rica) with the Costa Rican Tourism Board (ICT).",
+    "portalLink": "Official ICT Atlas Portal & Download",
     "text2": "Safety disclaimer: Coastal conditions, road access, lifeguard presence, and rip channels change continuously with tides, swells, and seasons. This tool is an informational guide and does not replace on-site observation or instructions from lifeguards and local authorities.",
     "text3": "Satellite imagery provided by Esri World Imagery; base maps by OpenStreetMap, CARTO, and OpenTopoMap. Web libraries: Leaflet (BSD-2) and Leaflet.markercluster (MIT).",
     "text4": "Software License: The application source code and web architecture are licensed under Apache 2.0. The underlying scientific research, indicators, and Atlas classifications belong to Dr. Isabel Arozarena Llopis (RONMAC–UNA / ICT) and are not licensed under Apache 2.0."

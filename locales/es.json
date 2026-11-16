@@ -230,6 +230,7 @@
   "about": {
     "title": "Fuente de Datos y Atribución",
     "text1": "Los datos cartográficos, clasificaciones de peligrosidad por corrientes de resaca, accesos, colores de arena, geomorfología y usos provienen del \"Atlas de Playas de Costa Rica con Énfasis en la Seguridad\" (2024), elaborado por la geomorfóloga costera Dra. Isabel Arozarena Llopis (Programa RONMAC, Universidad Nacional de Costa Rica) con apoyo del Instituto Costarricense de Turismo (ICT).",
+    "portalLink": "Descargar / Consultar en Portal Oficial ICT",
     "text2": "Nota de seguridad: Las condiciones costeras, el estado de los caminos, la presencia de guardavidas y los canales de corriente cambian con la marea, el oleaje y las estaciones. Esta aplicación es una herramienta informativa de referencia y no sustituye la observación en sitio ni las indicaciones de autoridades o guardavidas.",
     "text3": "Las imágenes satelitales corresponden a Esri World Imagery y la cartografía base a OpenStreetMap / CARTO / OpenTopoMap. Bibliotecas web: Leaflet (BSD-2) y Leaflet.markercluster (MIT).",
     "text4": "Licencia del software: El código fuente y arquitectura web están licenciados bajo Apache 2.0. Las investigaciones científicas, indicadores y clasificaciones del Atlas son propiedad intelectual de la Dra. Isabel Arozarena Llopis (Programa RONMAC–UNA / ICT) y no se licencian bajo Apache 2.0."
