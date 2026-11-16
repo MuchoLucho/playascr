@@ -16,8 +16,10 @@
 
 import {
   AlertTriangle,
+  Camera,
   Car,
   Check,
+  ExternalLink,
   Eye,
   Fish,
   GitFork,
@@ -60,6 +62,8 @@ const ICON_REGISTRY = {
   locate: LocateFixed,
   gitFork: GitFork,
   heart: Heart,
+  camera: Camera,
+  externalLink: ExternalLink,
 };
 
 /**

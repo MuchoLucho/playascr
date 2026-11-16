@@ -803,6 +803,89 @@ select {
   gap: 16px;
 }
 
+/* Beach Verified Photo Card */
+.beach-photo-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 200px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+}
+
+.beach-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.beach-photo-card:hover .beach-photo-img {
+  transform: scale(1.02);
+}
+
+.beach-photo-overlay {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.88) 0%, rgba(15, 23, 42, 0.4) 65%, transparent 100%);
+  padding: 16px 10px 8px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 8px;
+  color: #ffffff;
+  font-size: 0.72rem;
+}
+
+.photo-credit {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  opacity: 0.95;
+}
+
+.photo-credit span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.photo-license {
+  background: rgba(255, 255, 255, 0.22);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.photo-link {
+  color: #ffffff;
+  opacity: 0.8;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  text-decoration: none;
+  transition: opacity 0.15s ease, background 0.15s ease;
+}
+
+.photo-link:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.2);
+}
+
 .section-heading {
   margin: 0 0 8px;
   font-size: 0.78rem;
