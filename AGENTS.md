@@ -65,3 +65,8 @@ This document tracks the architecture, extraction pipeline, data schemas, intern
 - [x] Step 5: Build responsive web app (`index.html`, `css/styles.css`, `js/*.js`, `manifest.json`, `sw.js`, `README.md`)
 - [x] Step 6: Automated & live browser verification (desktop `1440x900` + mobile `390x844`) and final `AGENTS.md` update
 - [x] Step 7: Migrate frontend dependencies & GitHub Pages CI build to `npm` + `Vite` (`package.json`, `vite.config.js`, `.github/workflows/deploy.yml`, bundled `leaflet` & `leaflet.markercluster`, `sw.js` `playascr-v3`)
+
+---
+
+## 6. Git & Remote Deployment Policy
+- **Explicit Push Only**: Push commits to remote (`git push origin main` or any remote) **ONLY when explicitly requested by the user**. Never push automatically or implicitly after changes. Local commits and builds can be made, but pushing to the remote repository is strictly on-demand.

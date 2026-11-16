@@ -88,6 +88,22 @@ function escapeHtml(str) {
     .replace(/"/g, '&quot;');
 }
 
+let photosCache = null;
+async function loadBeachPhotos() {
+  if (photosCache) return photosCache;
+  try {
+    const res = await fetch('./data/beach-photos.json');
+    if (res.ok) {
+      photosCache = await res.json();
+    } else {
+      photosCache = {};
+    }
+  } catch {
+    photosCache = {};
+  }
+  return photosCache;
+}
+
 export class BeachDrawer {
   constructor({ onInspectSatellite }) {
     this.el = document.getElementById('beach-drawer');
@@ -142,11 +158,14 @@ export class BeachDrawer {
     });
   }
 
-  open(beach, sectorFeature = null) {
+  async open(beach, sectorFeature = null) {
     this.currentBeach = beach;
     this.currentSector = sectorFeature;
     this.el.classList.add('open');
     this.el.classList.remove('peek');
+    if (!photosCache) {
+      await loadBeachPhotos();
+    }
     this.render();
   }
 
@@ -177,6 +196,25 @@ export class BeachDrawer {
       `<span class="tag" style="display:inline-flex;align-items:center;gap:4px;">${b.visited ? iconSvg('check', { size: 12, strokeWidth: 2.5 }) + '<span>' + escapeHtml(t('drawer.visited')) + '</span>' : '• <span>' + escapeHtml(t('drawer.notVisited')) + '</span>'}</span>`
     ];
     this.badgesEl.innerHTML = badges.join('');
+
+    const photo = photosCache && photosCache[b.id];
+    const photoHtml = photo
+      ? `
+        <div class="beach-photo-card">
+          <img class="beach-photo-img" src="${escapeHtml(photo.thumbUrl)}" alt="${escapeHtml(b.name)}" loading="lazy" onerror="this.parentElement.style.display='none'">
+          <div class="beach-photo-overlay">
+            <span class="photo-credit">
+              ${iconSvg('camera', { size: 12 })}
+              <span>${escapeHtml(photo.author)}</span>
+              <span class="photo-license">${escapeHtml(photo.license)}</span>
+            </span>
+            <a href="${escapeHtml(photo.sourceUrl || photo.thumbUrl)}" target="_blank" rel="noopener noreferrer" class="photo-link" title="Ver foto en Wikimedia Commons">
+              ${iconSvg('externalLink', { size: 13 })}
+            </a>
+          </div>
+        </div>
+      `
+      : '';
 
     const hazardsList = (b.hazards && b.hazards.length ? b.hazards : ['ninguno_conocido'])
       .map((h) => escapeHtml(t(`hazards.${h}`)))
@@ -218,6 +256,7 @@ export class BeachDrawer {
     const wazeUrl = `https://waze.com/ul?ll=${b.lat},${b.lng}&navigate=yes`;
 
     this.bodyEl.innerHTML = `
+      ${photoHtml}
       ${
         b.altNames && b.altNames.length
           ? `<div style="font-size:0.82rem;color:var(--text-muted)"><strong>${escapeHtml(t('drawer.altNames'))}:</strong> ${escapeHtml(b.altNames.join(', '))}</div>`
